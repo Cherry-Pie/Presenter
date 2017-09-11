@@ -1,0 +1,21 @@
+{
+    "name": "yaro/presenter",
+    "description": "Eloquent models or arrays presenter for Laravel 5",
+    "keywords": ["laravel", "model", "presenter", "eloquent"],
+    "require": {
+        "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yaro\\Presenter\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaro",
+            "email": "12fcv4@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
