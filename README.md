@@ -16,25 +16,25 @@ use Yaro\Presenter\AbstractPresenter;
 
 class UserPresenter extends AbstractPresenter
 {
-	protected $arrayable = [
-		'name',
-		'profession'
-	];
+    protected $arrayable = [
+        'name',
+        'profession'
+    ];
 }
 ```
 
 Additionally you can add method for getting specific values:
 ```php
 protected $arrayable = [
-	'name',
-	'profession',
-	'random_number', // <- a virtual key, that model doesnt contain
+    'name',
+    'profession',
+    'random_number', // <- a virtual key, that model doesnt contain
 ];
 
 // just studly case your key and surround it with 'get' and 'Present'.
 public function getRandomNumberPresent()
 {
-	return rand(11,22);
+    return rand(11,22);
 }
 ```
 
@@ -45,10 +45,10 @@ use Yaro\Presenter\PresenterTrait;
 
 class User
 {
-	use PresenterTrait;
-	// ...
+    use PresenterTrait;
+    // ...
 
-	protected $presenter = \App\Presenters\UserPresenter::class;
+    protected $presenter = \App\Presenters\UserPresenter::class;
 
 }
 ```
@@ -57,14 +57,14 @@ Or override ```getPresenterClass``` method, if you dont like protected attribute
 ```php
 class User
 {
-	use PresenterTrait;
-	// ...
+    use PresenterTrait;
+    // ...
 
-	public function getPresenterClass()
+    public function getPresenterClass()
     {
-    	if ($this->isBlocked()) {
-			return \App\Presenters\BlockedUserPresenter::class;
-    	}
+        if ($this->isBlocked()) {
+            return \App\Presenters\BlockedUserPresenter::class;
+        }
 
         return \App\Presenters\UserPresenter::class;
     }
@@ -80,9 +80,9 @@ return response()->json(compact('user'));
 ```
 ```json
 {
-	"name": "Davy Jones",
-	"profession": "pirate",
-	"random_number": 13
+    "name": "Davy Jones",
+    "profession": "pirate",
+    "random_number": 13
 }
 ```
 
