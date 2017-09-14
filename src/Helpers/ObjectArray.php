@@ -2,7 +2,9 @@
 
 namespace App\Presenter\Helpers;
 
-class ObjectArray
+use Illuminate\Contracts\Support\Arrayable;
+
+class ObjectArray implements Arrayable
 {
     private $data = [];
 
@@ -14,5 +16,13 @@ class ObjectArray
     public function __get(string $name)
     {
         return isset($this->data[$name]) ? $this->data[$name] : null;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+    	return $this->data;
     }
 }

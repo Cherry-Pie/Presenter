@@ -13,7 +13,7 @@ trait PresenterTrait
         return $this;
     }
 
-    public function getPresenterClass(string $class)
+    public function getPresenterClass()
     {
         return $this->presenter;
     }
@@ -25,7 +25,7 @@ trait PresenterTrait
 
     public function toArray()
     {
-        $presenter = $this->presenter;
+        $presenter = $this->getPresenterClass();
         if ($presenter) {
             $presenter = new $presenter($this);
             return $presenter->toArray();
