@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Presenter\Helpers;
+namespace Yaro\Presenter\Helpers;
 
 use Illuminate\Contracts\Support\Arrayable;
 
