@@ -4,8 +4,6 @@ namespace Yaro\Presenter;
 
 trait PresenterTrait
 {
-    protected $presenter = '';
-
     public function setPresenterClass(string $class)
     {
         $this->presenter = $class;
