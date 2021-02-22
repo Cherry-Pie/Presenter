@@ -3,7 +3,7 @@
     "description": "Eloquent models or arrays presenter for Laravel 5",
     "keywords": ["laravel", "model", "presenter", "eloquent"],
     "require": {
-        "illuminate/support": "5.*|6.*|7.*"
+        "illuminate/support": "5.*|6.*|7.*|8.*"
     },
     "autoload": {
         "psr-4": {
